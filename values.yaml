@@ -2,7 +2,7 @@ image:
   repository: redis/redis-stack
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.  
-  tag: ""
+  tag: "7.2.0-v2"
 
 persistence:
   enabled: true
