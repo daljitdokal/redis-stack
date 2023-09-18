@@ -1,0 +1,13 @@
+image:
+  repository: redis/redis-stack
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.  
+  tag: ""
+
+persistence:
+  enabled: true
+  size: 1Gi # Adjust the size as needed
+
+service:
+  type: NodePort
+  port: 6379
