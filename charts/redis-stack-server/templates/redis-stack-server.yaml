@@ -43,7 +43,6 @@ spec:
   - metadata:
       name: db
     spec:
-      accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
           storage: {{ .Values.redis_stack_server.storage }}
