@@ -44,7 +44,6 @@ spec:
       name: db
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: {{ .Values.redis_stack_server.storage_class }}
       resources:
         requests:
           storage: {{ .Values.redis_stack_server.storage }}
