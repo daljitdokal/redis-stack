@@ -7,13 +7,22 @@ And we are committing to deliver all of these capabilities through every distrib
 ## Helm install
 
 ```
-helm upgrade --install redis-test ./redis-stack
+export namespace="redis"
 
-helm history redis-test
+# oc new-project ${namespace}
+oc project ${namespace}
+
+helm upgrade --install redis-stack-server ./charts/redis-stack-server -n ${namespace}
 ```
 
 ## Helm uninstall
 
 ```
-helm delete redis-test
+helm history redis-stack
+```
+
+## Helm uninstall
+
+```
+helm delete redis-stack
 ```
